@@ -1,0 +1,97 @@
+{
+    "get_bat_info": {
+        "status": 0,
+        "data": {
+            "BootVoltage": 3980,
+            "Serial": "F5D44671CH6FW5VBY",
+            "NominalChargeCapacity": 1185,
+            "InstantAmperage": 2950,
+            "IsCharging": true,
+            "CycleCount": 689,
+            "DesignCapacity": 1751,
+            "CurrentCapacity": 900,
+            "AppleRawCurrentCapacity": 900,
+            "Temperature": 1930,
+            "Voltage": 4308,
+            "BatteryInstalled": true,
+            "ExternalChargeCapable": true,
+            "ExternalConnected": true,
+            "UpdateTime": 1706796525,
+            "AdapterDetails": {
+                "Description": "usb host",
+                "Manufacturer": "Apple Inc.",
+                "Name": "87W USB-C Power Adapter",
+                "Current": 2400,
+                "Voltage": 5000,
+                "Watts": 12,
+                "IsWireless": 0
+            },
+            "PostChargeWaitSeconds": 120
+        }
+    },
+    "get_conf": {
+        "status": 0,
+        "data": {
+            "enable": false,
+            "ver": "1.0",
+            "update_freq": 1,
+            "dark": true,
+            "floatwnd": false,
+            "floatwnd_auto": false,
+            "sysver": "13.0",
+            "devmodel": "iPhone9,1",
+            "mode": "charge_on_plug",
+            "lang": "en",
+            "charge_below": 30,
+            "charge_above": 70,
+            "enable_temp": true,
+            "temp_mode": 0,
+            "charge_temp_above": 35,
+            "charge_temp_below": 20,
+            "acc_charge": false,
+            "acc_charge_airmode": true,
+            "acc_charge_wifi": false,
+            "acc_charge_blue": false,
+            "acc_charge_bright": false,
+            "acc_charge_lpm": true,
+            "action": "",
+            "adv_prefer_smart": true,
+            "adv_predictive_inhibit_charge": true,
+            "adv_disable_inflow": false,
+            "adv_thermal_avail": false,
+            "adv_limit_inflow": true,
+            "adv_limit_inflow_mode": "moderate",
+            "adv_def_thermal_mode": "off",
+            "adv_thermal_mode_lock": false,
+            "thermal_simulate_mode": "off",
+            "ppm_simulate_mode": "off",
+            "use_smart": true,
+            "sys_boot": 1710913770,
+            "serv_boot": 1710913779
+        }
+    },
+    "get_statistics": {
+        "status": 0,
+        "data": {
+            "month": [],
+            "day": [
+                {
+                    "NominalChargeCapacity": 2501,
+                    "UpdateTime": 1710607673,
+                    "key": "19798",
+                    "CycleCount": 374
+                }
+            ],
+            "hour": [
+                {
+                    "UpdateTime": 1710738002,
+                    "InstantAmperage": 0,
+                    "key": "475205",
+                    "CurrentCapacity": 100,
+                    "Temperature": 1470,
+                    "IsCharging": false
+                }
+            ]
+        }
+    }
+}
