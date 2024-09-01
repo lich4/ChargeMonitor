@@ -5,7 +5,7 @@
 ## 运行方法
 
 * Release中下载程序包,解压,将ChargeMonitor和www目录放在可执行目录下
-* 执行nohup ChargeMonitor &
+* 执行nohup ChargeMonitor & (或者 右键ChargeMonitor`open with`命令行执行软件)
 * 打开<http://127.0.0.1:1230>访问
 
 注意:
