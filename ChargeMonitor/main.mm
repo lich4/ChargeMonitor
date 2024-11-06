@@ -322,17 +322,20 @@ NSDictionary* handleReq(NSDictionary* nsreq) {
 }
 @end
 
+
 int main(int argc, const char* argv[]) {
     @autoreleasepool {
         if (argc == 1) {
-            g_serv_boot = (int)time(0);
-            conf_path = [NSString stringWithFormat:@"%@/chargemonitor.conf", NSHomeDirectory()];
-            db_path = [NSString stringWithFormat:@"%@/chargemonitor.db", NSHomeDirectory()];
-            [Service.inst serve];
-            atexit_b(^{
-                uninitDB();
+            runAsDaemon(^{
+                g_serv_boot = (int)time(0);
+                conf_path = [NSString stringWithFormat:@"%@/chargemonitor.conf", NSHomeDirectory()];
+                db_path = [NSString stringWithFormat:@"%@/chargemonitor.db", NSHomeDirectory()];
+                [Service.inst serve];
+                atexit_b(^{
+                    uninitDB();
+                });
+                CFRunLoopRun();
             });
-            CFRunLoopRun();
         } else if (argc > 1) {
             if (0 == strcmp(argv[1], "watch_bat_info")) {
                 while (true) {

@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <sys/socket.h>
+#include <sys/stat.h>
 #include <sys/sysctl.h>
 #include <sys/utsname.h>
 #include <unistd.h>
@@ -65,4 +66,29 @@ int get_sys_boottime() {
     return ts;
 }
 
+void runAsDaemon(void (^block)()) {
+    static int fds[2];
+    int flag_;
+    pipe(fds);
+    flag_ = fcntl(fds[0], F_GETFL, 0);
+    fcntl(fds[0], F_SETFL, flag_ | O_NONBLOCK);
+    flag_ = fcntl(fds[1], F_GETFL, 0);
+    fcntl(fds[1], F_SETFL, flag_ | O_NONBLOCK);
+    int forkpid = fork();
+    if (forkpid < 0) {
+        return;
+    } else if (forkpid > 0) { // father
+        sleep(1);
+        return;
+    }
+    setsid();
+    chdir("/");
+    umask(0);
+    int null_in = open("/dev/null", O_RDONLY);
+    int null_out = open("/dev/null", O_WRONLY);
+    dup2(null_in, STDIN_FILENO);
+    dup2(null_out, STDOUT_FILENO);
+    dup2(null_out, STDERR_FILENO);
+    block();
+}
 

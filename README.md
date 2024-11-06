@@ -4,9 +4,9 @@
 
 ## 运行方法
 
-* Release中下载程序包,解压,将ChargeMonitor和www目录放在可执行目录下
-* 执行nohup ChargeMonitor & (或者 右键ChargeMonitor`open with`命令行执行软件)
+* Release中下载程序包,解压到合适的路径,双击ChargeMonitor
 * 打开<http://127.0.0.1:1230>访问
+* 设置自动启动: 系统设置 - 通用 - 登录项 - 定位到ChargeMonitor并添加
 
 注意:
 * 上下滑动为时移,不支持FireFox

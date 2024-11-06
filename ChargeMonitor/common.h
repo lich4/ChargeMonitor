@@ -9,5 +9,6 @@ bool is_port_open(int port);
 NSString* getSysVer();
 NSString* getDevMdoel();
 int get_sys_boottime();
+void runAsDaemon(void (^block)());
 
 #endif /* common_h */
