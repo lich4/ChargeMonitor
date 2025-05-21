@@ -9,7 +9,7 @@
 * 设置自动启动: 系统设置 - 通用 - 登录项 - 定位到ChargeMonitor并添加
 
 注意:
-* 上下滑动为时移,不支持FireFox
+* 上下滑动为时移(确保页面完全显示的情况下使用鼠标滚轮/或触控板),不支持FireFox
 
 ![](https://raw.githubusercontent.com/lich4/ChargeMonitor/main/screenshots/screenshot0.png)
 ![](https://raw.githubusercontent.com/lich4/ChargeMonitor/main/screenshots/screenshot1.png)
